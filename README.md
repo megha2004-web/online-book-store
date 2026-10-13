@@ -5,23 +5,25 @@ A responsive front-end bookstore web application built with HTML, CSS, and JavaS
 ## Features
 
 - Search books by title or author
-- Filter by category
-- Browse book cards with details
-- Shopping cart with quantity updates and subtotal
+- Filter books by category
+- Browse book cards with book details
+- Shopping cart with quantity updates and subtotal calculation
 - Responsive layout for desktop, tablet, and mobile screens
 
-## Run locally
+## Live Demo
 
-From the project folder, start a local web server:
+Visit the live website: https://megha2004-web.github.io/online-book-store/
 
-```bash
-python -m http.server 8000
-```
+## Project Files
 
-Open http://localhost:8000 in your browser.
+- `index.html` – Page structure
+- `styles.css` – Overall design and responsive styling
+- `script.js` – Book data, search, filtering, and interactive shopping cart logic
 
-## Project files
+## Technologies Used
 
-- `index.html` – page structure
-- `styles.css` – overall design and responsiveness
-- `script.js` – book data and interactive shopping cart logic
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages for hosting
+
