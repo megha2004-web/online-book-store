@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookNest | Online Book Store</title>
+    <meta
+      name="description"
+      content="Discover fiction, technology, education, and self-development books in an elegant online bookstore."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="BookNest home">
+          <span class="brand-mark">📚</span>
+          <span>BookNest</span>
+        </div>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#">Home</a>
+          <a href="#featured">Featured</a>
+          <a href="#categories">Categories</a>
+          <a href="#offers">Offers</a>
+        </nav>
+
+        <button class="cart-toggle" id="cartToggle" aria-label="Open shopping cart">
+          <span>Cart</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="featured">
+          <div class="hero-copy">
+            <p class="eyebrow">Curated reads for every curious mind</p>
+            <h1>Find your next favorite book</h1>
+            <p class="hero-text">
+              Browse handpicked titles in fiction, technology, education, and self-development.
+            </p>
+
+            <label class="search-box" for="searchInput">
+              <span class="search-icon">⌕</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Search books by title or author"
+                aria-label="Search books"
+              />
+            </label>
+
+            <div class="filter-bar" id="categories" aria-label="Book categories">
+              <button class="category-btn active" data-category="all" type="button">All</button>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Featured book highlight">
+            <div class="hero-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80"
+                alt="Featured book stack"
+              />
+            </div>
+            <div class="hero-card-content">
+              <p class="mini-label">Featured pick</p>
+              <h3>The Silent Horizon</h3>
+              <p>By Aidan Brooks</p>
+              <div class="rating-row">
+                <span>★★★★★</span>
+                <span>4.9</span>
+              </div>
+              <strong>$24.99</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog">
+          <div class="section-header">
+            <div>
+              <p class="section-tag">Discover</p>
+              <h2>Trending Books</h2>
+            </div>
+            <span class="result-count" id="resultsCount">0 books</span>
+          </div>
+
+          <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-cart" id="closeCart" type="button" aria-label="Close cart">✕</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="checkout-btn" type="button">Proceed to Checkout</button>
+      </div>
+    </aside>
+
+    <div class="modal-backdrop hidden" id="bookModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close-modal" id="closeModal" type="button" aria-label="Close book details">✕</button>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
